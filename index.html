@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Bubbu ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#ffd6e0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+.page{display:none;padding:20px;}
+.active{display:block;}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#ff4d6d;
+color:white;
+font-size:18px;
+margin-top:20px;
+}
+
+.gift{
+font-size:80px;
+cursor:pointer;
+margin:20px;
+}
+
+img{
+width:150px;
+border-radius:15px;
+margin:5px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active">
+<h1>Bubbu 💕</h1>
+<h2>Will you be my Valentine?</h2>
+<button onclick="next()">Yes ❤️</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+<h1 style="font-size:40px;">I LOVE YOU BUBBU ❤️</h1>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+<h2>Pick your gift 🎁</h2>
+
+<div>
+<span class="gift" onclick="letter()">💌</span>
+<span class="gift" onclick="photos()">📸</span>
+</div>
+</div>
+
+<!-- LETTER -->
+<div class="page">
+<h2>My Bubbu ❤️</h2>
+
+<p>
+You are my home, my peace, my forever.<br>
+Thank you for loving me the way you do.<br>
+This is our first Valentine and many more to come 💕<br><br>
+
+Forever yours 😘
+</p>
+
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PHOTOS -->
+<div class="page">
+<h2>Us 🥺❤️</h2>
+
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+
+<button onclick="next()">Next</button>
+</div>
+
+<!-- LAST -->
+<div class="page">
+<h2>Now say “I love you” 10 times to me 😌❤️</h2>
+<h3>No cheating Bubbu 💋</h3>
+</div>
+
+<script>
+let current=0;
+let pages=document.querySelectorAll(".page");
+
+function next(){
+pages[current].classList.remove("active");
+current++;
+pages[current].classList.add("active");
+}
+
+function letter(){
+pages[current].classList.remove("active");
+current=3;
+pages[current].classList.add("active");
+}
+
+function photos(){
+pages[current].classList.remove("active");
+current=4;
+pages[current].classList.add("active");
+}
+</script>
+
+</body>
+</html>
